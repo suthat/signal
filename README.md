@@ -10,19 +10,14 @@ http://www.avc.com/a_vc/2011/03/mobile-notifications.html)
 #### Problems of existed notifications ####
 
 > * It ends up with different notifications on different devices.
-
 > * Less feedback (most of them have only ack, status).
-
 > * If some services, smart devices, and IO devices want to provide notification messages to the users by creating a simply and describable statement.
-
 > * Commercial Licenses (mostly, for service costs and financial).
 
 #### Solutions ####
 
 > * Design and propose notification description, mapping and query language which allows any provider to delivers messages to multiple type of user’s devices. 
-
 > * Design and propose notification languages parsers and a real-time notification service that works with the proposed languages and parser.
-
 > * Develop an opensource framework for multiple-consumers notification service.
 
 #### Propose of Notification Languages ####
