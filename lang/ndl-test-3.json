@@ -1,0 +1,113 @@
+{
+   "signalndl":{
+      "provider":{
+         "id":"596b65af-61b3-4b8d-9e58-a84f62c00c89",
+         "token":"eb63ae7e7415a27a8553ae4f7021f314"
+      },
+      "scope":{
+         "type":"pubsub",
+         "domain":[
+            "os",
+            "app",
+            "websocket"
+         ],
+         "timezone":"ignore",
+         "platform":[
+            "ios",
+            "android",
+            "html5",
+            "cli"
+         ],
+         "language":[
+            "en",
+            "th"
+         ]
+      },
+      "notification":{
+         "notifytime":"complex-schedule",
+         "restrict":"high",
+         "interval":{
+            "starttimestamp":"2013-10-01 06:00",
+            "expiretimestamp":"2013-10-31 23:59"
+         },
+         "timeline":[
+            {
+               "trigger_time":"06:00",
+               "trigger_repeat":"everyday",
+               "trigger_repeat_condition":[
+                  "IF NO ack IN 10 MIN SEND $this",
+                  "IF NO FEEDBACK.userid SEND $need_userid NOW",
+                  "IF FEEDBACK.point IS 0 SEND $this NEXT 10 MIN"
+               ],
+               "topic":"helloworld",
+               "message":"welcome to signal",
+               "link":"http://www.signalproject.org",
+               "customplatform":{
+                  "ioscustom":[
+                     { "badges":"5" },
+                     { "sound":"sample.ios.wav" }
+                  ],
+                  "androidcustom":[
+                     {"header":"hello"},
+                     {"sound":"sample.android.wav"},
+                     {"icon":"sample.icon.png"}
+                  ]
+               }
+            },
+            {
+               "trigger_reference":"need_userid",
+               "topic":"helloworld",
+               "message":"welcome to signal again",
+               "link":"http://www.signalproject.org",
+               "customplatform":{
+                  "ioscustom":[
+                     { "badges":"5" },
+                     { "sound":"sample.ios.wav" }
+                  ],
+                  "androidcustom":[
+                     {"header":"hello"},
+                     {"sound":"sample.android.wav"},
+                     {"icon":"sample.icon.png"}
+                  ]
+               }
+            }
+         ]
+      },
+      "consumer":{
+         "device":{
+            "ios":[
+               "4a7bf17b-6e94-495b-9bf4-9387962e686a",
+               "6cc0c4fb-faa6-4a89-8578-359c2b7e10b8",
+               "6c6b4103-d216-4185-a7fd-df0bf4f91d52",
+               "16ded8f1-4757-4459-aae0-6293d40aefb4",
+               "ce7f0746-a994-4cfa-9fce-06c75b4653c0"
+            ],
+            "android":[
+               "2ce7b25f-002b-46cd-a6a0-057b8f6c6892",
+               "873fd5a4-b551-4bf9-9409-ffe1251c92cf",
+               "f5165960-ae32-4953-ad7a-1cc584c163c8",
+               "c7185ab0-8439-4ba7-a5a6-b72cd18b3a67",
+               "bb7c88e5-0630-4b31-9d3c-7483e76579ff"
+            ]
+         },
+         "keytopic":[
+            "Animalisation",
+            "Sectile",
+            "Frivolism",
+            "Fleshquake",
+            "Drub"
+         ]
+      },
+      "feedback":{
+         "use":"true",
+         "domain":"nql",
+         "variable":[
+            { "string":"userid" },
+            { "array":"scenarios" },
+            { "integer":"point" },
+            { "boolean":"seen" },
+            { "float":"pi" }
+         ]
+      }
+   }
+}
