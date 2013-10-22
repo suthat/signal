@@ -28,11 +28,11 @@ Develop an opensource framework for multiple-consumers notification service.
 #### Propose of Notification Languages ####
 
 > * Notification Description Language (NDL)
->> It will describes notification data, feedback, realtime conditions, channels, devices, etc. in a single standard format.
+> It will describes notification data, feedback, realtime conditions, channels, devices, etc. in a single standard format.
 > * Notification Query Language (NQL)
->>It will uses for retrieving notification data, status and its feedback.  
+> It will uses for retrieving notification data, status and its feedback.  
 > * Notification Mapping Language (NML)
->> It will uses for mapping notification data and feedback from different protocols to NDL. For example, mapping notification data created by a heat sensor or a water leak sensor in the home to NDL and notify to user’s devices.
+> It will uses for mapping notification data and feedback from different protocols to NDL. For example, mapping notification data created by a heat sensor or a water leak sensor in the home to NDL and notify to user’s devices.
 
 #### On Github Right Now ####
 
