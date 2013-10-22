@@ -37,7 +37,7 @@ http://www.avc.com/a_vc/2011/03/mobile-notifications.html)
 #### On Github Right Now ####
 
 > + Signal is written on Java based-application (J2EE)
-> + Folder "Signal" is a main project (Core Application)
+> + Folder "Signal" is a main project (Core Application) - Simple Web Application for Signal provider, All Language Parsers, All Signal provider and consumer APIs 
 > + Folder "SignalRT" is a real-time scheduling service 
 > + Folder "Jignal" is a Signal 's Java client library (Dev and Test)
 > + Folder "libs" contains all of opensource libraries which are used in this project
