@@ -1,7 +1,7 @@
 Signal 
 ======
 
-+ Signal is An Opensource Framework for Multiple-Consumers Notification Service.
+Signal is An Opensource Framework for Multiple-Consumers Notification Service.
 
 > + Signal is written on Java based-application (J2EE)
 > + Folder "Signal" is a main project (Core Application)
@@ -17,3 +17,5 @@ Signal
 * RabbitMQ (http://www.rabbitmq.com)
 * RabbitMQ STOMP (http://www.rabbitmq.com/stomp.html)
 * RabbitMQ Managemant (http://www.rabbitmq.com/management.html)
+
+All code on this site is licensed under the Apache License (http://www.apache.org/licenses) unless stated otherwise.
