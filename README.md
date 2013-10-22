@@ -50,4 +50,11 @@ http://www.avc.com/a_vc/2011/03/mobile-notifications.html)
 * RabbitMQ STOMP (http://www.rabbitmq.com/stomp.html)
 * RabbitMQ Managemant (http://www.rabbitmq.com/management.html)
 
+#### Author ####
+Suthat Ronglong
+M.Sc.Computer Science
+suthat@do.in.th
+
+<script src="paypal-button.min.js?merchant=suthat@do.in.th" data-button="donate" data-name="Signal - Opensource Notification Framework"></script>
+
 All code on this site is licensed under the Apache License (http://www.apache.org/licenses) unless stated otherwise. School of Information Technology, KMUTT (Thailand).
