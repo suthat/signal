@@ -29,18 +29,6 @@ http://www.avc.com/a_vc/2011/03/mobile-notifications.html)
 > * Notification Mapping Language (NML)
 > It will uses for mapping notification data and feedback from different protocols to NDL. For example, mapping notification data created by a heat sensor or a water leak sensor in the home to NDL and notify to user’s devices.
 
-#### On Github Right Now ####
-
-> + Signal is written on Java based-application (J2EE)
-> + Folder "Signal" is a main project (Core Application) - Simple Web Application for Signal provider, All Language Parsers, All Signal provider and consumer APIs 
-> + Folder "SignalRT" is a real-time scheduling service 
-> + Folder "Jignal" is a Signal 's Java client library (Dev and Test)
-> + Folder "libs" contains all of opensource libraries which are used in this project
-> + Folder "lang" contains examples of notification languages. It 's Signal proposed languages
-> + Folder "db" contains simple relational database schema and content (MySQL exported file) 
-> + Folder "script" contains examples of Signal provider and client libraries
-> + Folder "test" contains examples of test scripts and test files
-
 #### Opensource dependencies ####
 
 * Java JDK 1.7 (http://www.java.com)
@@ -55,4 +43,5 @@ http://www.avc.com/a_vc/2011/03/mobile-notifications.html)
 > * M.Sc.Computer Science
 > * suthat@do.in.th
 
-All code on this site is licensed under the Apache License (http://www.apache.org/licenses) unless stated otherwise. School of Information Technology, KMUTT (Thailand).
+#### License ####
+> All code on this site is licensed under the Apache License (http://www.apache.org/licenses) unless stated otherwise. School of Information Technology, KMUTT (Thailand).
