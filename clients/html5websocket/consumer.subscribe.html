@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signal Javascript APIs</title>
+        <meta charset="utf-8"/>
+        <style type="text/css">
+            #notification {
+                display: none;
+                position: fixed;
+                cursor: pointer;
+                width: 100%;
+                background: #EFEFEF;
+                text-align: center;
+                border-top: 2px solid #FFF;
+                z-index:9999;
+            }
+        </style>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/sockjs-0.3.min.js"></script>
+        <script src="js/stomp-1.0.js"></script>
+        <script src="js/signal.apis.js"></script>
+    </head>
+    <body>
+        <div id="notification">
+          <p id="notification_message"></p>
+        </div>
+        <p id="error"><p>
+        <p id="logs"></p>
+        <script src="js/miniNotification.js"></script>
+        <script type="text/javascript">
+
+            var SIGNAL_HOST = 'http://127.0.0.1:15674/stomp';
+            var SIGNAL_EXCHANGE_KEY = 'signal.html5.helloworld';
+
+            Stomp.WebSocketClass = SockJS;
+            var client = Stomp.client(SIGNAL_HOST);
+            var on_connect = function(s) {
+                $('#error').html('READY');
+                id = client.subscribe('/exchange/' + SIGNAL_EXCHANGE_KEY, function(data) {
+                    var str = data.body;
+                    var temp = str.split('|');
+                    var token = temp[0];
+                    var fbref = temp[1];
+                    var message = temp[2];
+                    var link = temp[3];
+                    var custom = temp[4];
+
+                    $('#notification_message').html(message);
+                    $('#notification').miniNotification();
+
+                    sendSignal('signal.ack', token, fbref, 'guest');
+                    sendSignal('signal.var', token, fbref, 'userid=meanie$.seen=true$.pi=3.141592$.point=78$.scenarios={none,demo}');
+                    getNFSignal('596b65af-61b3-4b8d-9e58-a84f62c00c89', 'eb63ae7e7415a27a8553ae4f7021f314', 'NOTIFICATION.FEEDBACK', "NOTIFICATION.TOKEN", token);
+                });
+            };
+            var on_error =  function() {
+                $('#error').html('LOST CONNECTION');
+            };
+            client.debug = function(str) {
+                $("#logs").append("<p>" + str + "</p>");
+            };
+            client.connect('guest', 'guest', on_connect, on_error, '/');
+
+            //getNFSignal("596b65af-61b3-4b8d-9e58-a84f62c00c89", "eb63ae7e7415a27a8553ae4f7021f314", "NOTIFICATION", "APP.UUID", "596b65af-61b3-4b8d-9e58-a84f62c00c89");
+            //getNFSignal("596b65af-61b3-4b8d-9e58-a84f62c00c89", "eb63ae7e7415a27a8553ae4f7021f314", "NOTIFICATION.DATA", "NOTIFICATION", "b78a81a346c5432ba516db66a221daa")
+            //getNFSignal("596b65af-61b3-4b8d-9e58-a84f62c00c89", "eb63ae7e7415a27a8553ae4f7021f314", "NOTIFICATION.FEEDBACK", "NOTIFICATION.TOKEN", "e97b4d0d16bce3542987637a9357e2f2");
+        </script>
+    </body>
+</html>

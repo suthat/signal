@@ -1,0 +1,38 @@
+ {
+   "signalnml":{
+      "auth":{
+         "id":"596b65af-61b3-4b8d-9e58-a84f62c00c89",
+         "token":"eb63ae7e7415a27a8553ae4f7021f314"
+      },
+      "notification":{
+         "requestapproach":"push",
+         "requesturl":"ignore",
+         "requesttimeinterval":"ignore",
+         "mapper":[
+            "dfk-sock1 AS NOTIFICATION.DATA.TOPIC",
+            "dfk-inter AS NOTIFICATION.DATA.MESSAGE",
+            "pk-image AS NOTIFICATION.DATA.CUSTOM.images",
+            "pk-sound AS NOTIFICATION.DATA.CUSTOM.sound"
+         ]
+      },
+      "feedback":{
+         "condition":[
+            "IF FEEDBACK.userACK GOTO STATEMENT $acknowledge NOW"
+         ],
+         "statement":[
+            {
+               "reference":"acknowledge",
+               "requesturl":"http://202.12.32:1:8010/command/apis/",
+               "requestdata":[
+                  { "token":"dGVzdHRlc3R0ZXN0dGVzdGhlbGxvd29ybGRtZWFuaWU=" },
+                  { "command":"ack_acc_3885" }
+               ],
+               "requesttimeout":30,
+               "requestheader":[
+                  {"authen":"Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ=="}
+               ]
+            }
+         ]
+      }
+   }
+}
