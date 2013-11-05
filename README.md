@@ -1,5 +1,4 @@
 ## Signal 
-=========
 
 Signal is An Opensource Framework for Multiple-Consumers Notification Service. It was found, designed, and developed at School of Information Technology, KMUTT (Thailand) or SIT (http://www.sit.kmutt.ac.th)
 
