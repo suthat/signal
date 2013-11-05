@@ -1,18 +1,18 @@
-Signal 
-======
+## Signal 
+=========
 
 Signal is An Opensource Framework for Multiple-Consumers Notification Service. It was found, designed, and developed at School of Information Technology, KMUTT (Thailand) or SIT (http://www.sit.kmutt.ac.th)
 
 > Users are beginning to rely on notifications, both in their private and working lives. Real-time messages deliver up-to-the-minute direct to users’ mobile phones, tablets, cameras , watches, glasses, or desktops. (F. Wilson. “Mobile Notifications”. A VC musings of a VC in NYC (1st March 1 2011) http://www.avc.com/a_vc/2011/03/mobile-notifications.html)
 
-### Problems of existed notifications
+#### Problems of existed notifications
 
 * It ends up with different notifications on different devices.
 * Less feedback (most of them have only ack, status).
 * If some services, smart devices, and IO devices want to provide notification messages to the users by creating a simply and describable statement.
 * Commercial Licenses (mostly, for service costs and financial).
 
-### Solutions
+#### Solutions
 
 * Design and propose notification description, mapping and query language which allows any provider to delivers messages to multiple type of user’s devices. 
 * Design and propose notification languages parsers and a real-time notification service that works with the proposed languages and parser.
@@ -35,10 +35,10 @@ It will uses for mapping notification data and feedback from different protocols
 ### Get Start
 * Installation https://github.com/suthat/signal/wiki/Get-Started#installation
 
-### Author
+#### Author
 Suthat Ronglong
 M.Sc.Computer Science
 suthat@do.in.th
 
-### License
+#### License
 All code on this site is licensed under the Apache License (http://www.apache.org/licenses) unless stated otherwise. School of Information Technology, KMUTT (Thailand).
