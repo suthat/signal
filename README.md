@@ -34,7 +34,7 @@ It will uses for mapping notification data and feedback from different protocols
 ### Get Start
 * Signal Wiki https://github.com/suthat/signal/wiki#what-is-signal
 * Installation https://github.com/suthat/signal/wiki/Get-Started#installation
-* Build & Run Signal https://github.com/suthat/signal/wiki/Get-Started#build-and-run
+* Build & Run https://github.com/suthat/signal/wiki/Get-Started#build-and-run
 
 #### Author
 Suthat Ronglong
