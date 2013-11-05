@@ -29,11 +29,12 @@ It will uses for retrieving notification data, status and its feedback.
 
 * Notification Mapping Language (NML)
 
-It will uses for mapping notification data and feedback from different protocols to NDL. For example, mapping notification data created by a heat sensor or a water leak sensor in the home to NDL and notify to user’s devices.
+It will uses for mapping notification data and feedback from different protocols to NDL.
 
 ### Get Start
 * Signal Wiki https://github.com/suthat/signal/wiki#what-is-signal
 * Installation https://github.com/suthat/signal/wiki/Get-Started#installation
+* Build & Run Signal https://github.com/suthat/signal/wiki/Get-Started#build-and-run
 
 #### Author
 Suthat Ronglong
