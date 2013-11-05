@@ -32,6 +32,7 @@ It will uses for retrieving notification data, status and its feedback.
 It will uses for mapping notification data and feedback from different protocols to NDL. For example, mapping notification data created by a heat sensor or a water leak sensor in the home to NDL and notify to user’s devices.
 
 ### Get Start
+* Signal Wiki https://github.com/suthat/signal/wiki/About-Signal#what-is-signal
 * Installation https://github.com/suthat/signal/wiki/Get-Started#installation
 
 #### Author
