@@ -39,8 +39,8 @@ It will uses for mapping notification data and feedback from different protocols
 
 #### Author
 Suthat Ronglong
-M.Sc.Computer Science
-suthat@do.in.th
+- M.Sc.Computer Science
+- suthat@do.in.th
 
 #### License
 All code on this site is licensed under the Apache License (http://www.apache.org/licenses) unless stated otherwise. School of Information Technology, KMUTT (Thailand).
