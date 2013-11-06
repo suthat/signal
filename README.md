@@ -39,7 +39,7 @@ It will uses for mapping notification data and feedback from different protocols
 
 #### Author
 Suthat Ronglong
-- M.Sc.Computer Science
+- M.Sc.Computer Science (SIT KMUTT, Bangkok Thailand)
 - suthat@do.in.th
 
 #### License
