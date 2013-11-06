@@ -1,7 +1,7 @@
 package edu.sit.signal.feedback;
 
 import edu.sit.signal.apis.DbApis;
-import edu.sit.signal.parser.NQLParser;
+import edu.sit.signal.parsers.NQLParser;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URLDecoder;

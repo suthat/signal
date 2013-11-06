@@ -4,7 +4,7 @@
  */
 package edu.sit.signal.simplerest;
 
-import edu.sit.signal.parser.NDLParser;
+import edu.sit.signal.parsers.NDLParser;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;

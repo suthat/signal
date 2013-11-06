@@ -1,6 +1,6 @@
 package edu.sit.signal.test;
 
-import edu.sit.signal.parser.NDLParser;
+import edu.sit.signal.parsers.NDLParser;
 
 /**
  *

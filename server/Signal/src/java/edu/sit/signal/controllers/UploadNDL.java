@@ -9,7 +9,7 @@ import edu.sit.signal.app.Config;
 import edu.sit.signal.models.App;
 import edu.sit.signal.models.Notification;
 import edu.sit.signal.ndl.NDLEnum;
-import edu.sit.signal.parser.NDLParser;
+import edu.sit.signal.parsers.NDLParser;
 import edu.sit.signal.pushers.Notifier;
 import java.io.File;
 import java.io.IOException;

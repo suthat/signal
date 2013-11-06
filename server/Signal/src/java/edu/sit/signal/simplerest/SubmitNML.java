@@ -3,7 +3,7 @@ package edu.sit.signal.simplerest;
 import com.google.gson.Gson;
 import edu.sit.signal.apis.DbApis;
 import edu.sit.signal.nml.NMLSchema;
-import edu.sit.signal.parser.NMLParser;
+import edu.sit.signal.parsers.NMLParser;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
