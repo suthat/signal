@@ -31,7 +31,7 @@ It will uses for retrieving notification data, status and its feedback.
 
 It will uses for mapping notification data and feedback from different protocols to NDL.
 
-### Get Start
+### Get Started
 * Signal Wiki https://github.com/suthat/signal/wiki#what-is-signal
 * Installation https://github.com/suthat/signal/wiki/Get-Started#installation
 * Build & Run https://github.com/suthat/signal/wiki/Get-Started#build-and-run
