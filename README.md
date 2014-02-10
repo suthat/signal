@@ -8,14 +8,13 @@ Signal is An Opensource Framework for Multiple-Consumers Notification Service. I
 
 * It ends up with different notifications on different devices.
 * Less feedback (most of them have only ack, status).
-* If some services, smart devices, and IO devices want to provide notification messages to the users by creating a simply and describable statement.
 * Commercial Licenses (mostly, for service costs and financial).
 
 #### Solutions
 
-* Design and propose notification description, mapping and query language which allows any provider to delivers messages to multiple type of user’s devices. 
-* Design and propose notification languages parsers and a real-time notification service that works with the proposed languages and parser.
-* Develop an opensource framework for multiple-consumers notification service.
+* Design and propose notification description, notification mapping and notification query language. Notification languages allow any provider to delivers messages to multiple types of user’s devices.
+* Design notification languages’ parsers with a built-in real-time notification service, this will propose customizable notification and feedback languages with their parsers including the real-time scheduling service.
+* Develop an opensource framework for multiple-consumers notification service and contribute new software to opensource community for getting collaboration improvement with other developers. 
 
 #### Propose of Notification Languages ####
 
