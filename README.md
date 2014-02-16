@@ -1,6 +1,6 @@
 ## Signal 
 
-Signal is An Opensource Framework for Multiple-Consumers Notification Service. It was found, designed, and developed at School of Information Technology, KMUTT (Thailand) or SIT (http://www.sit.kmutt.ac.th)
+Signal is a framework for multiple consumers motification service. It was found, designed, and developed at School of Information Technology, KMUTT (Thailand) or SIT (http://www.sit.kmutt.ac.th)
 
 > Users are beginning to rely on notifications, both in their private and working lives. Real-time messages deliver up-to-the-minute direct to users’ mobile phones, tablets, cameras , watches, glasses, or desktops. (F. Wilson. “Mobile Notifications”. A VC musings of a VC in NYC (1st March 1 2011) http://www.avc.com/a_vc/2011/03/mobile-notifications.html)
 
