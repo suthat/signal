@@ -1,4 +1,4 @@
-## Signal 
+## Signal
 
 Signal is a framework for multiple consumers notification service. It was found, designed, and developed at School of Information Technology, KMUTT (Thailand) or SIT (http://www.sit.kmutt.ac.th)
 
