@@ -1,0 +1,45 @@
+{
+    "signalmdl": {
+        "provider": {
+            "id": "3422841103384567",
+            "secret": "cef9d37913b8449d9610f4f653f0ef01"
+        },
+        "scope": {
+            "type": "pubsub",
+            "domain": "websocket",
+            "platform": "html5"
+        },
+        "notification": {
+            "notifytime": "now",
+            "restrict": "high",
+            "data": {
+                "topic": "csc102-B787TQA",
+                "message": "",
+                "link": "",
+                "customplatform": {
+                    "html5": [
+                        {
+                            "question_id": "123456",
+                            "question_title": "Basic Java",
+                            "question_body": "What is main characteristic of Java",
+                            "answer_list": {
+                                "A": "OOP",
+                                "B": "Stuctural",
+                                "C": "Both anwsers",
+                                "D": "No anwser"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "feedback": {
+            "use": "true",
+            "domain": "mql",
+            "variable": [
+                "userid",
+                "anwser"
+            ]
+        }
+    }
+}
