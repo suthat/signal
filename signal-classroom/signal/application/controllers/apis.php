@@ -161,6 +161,7 @@ class Apis extends CI_Controller {
 	 					$e = explode('=', $e);
 	 					if(in_array($e[0], $feedback_vars, TRUE)){
 	 						$fvar_data = array(
+	 							'notification' => $token,
 	 							'feedback' => $id,
 	 							'variable' => $e[0],
 	 							'value' => $e[1]
@@ -208,14 +209,24 @@ class Apis extends CI_Controller {
 						$notification = $this->table_notifications->get('id', $where[1]);
 						if($notification){
 							$result = array();
+							$values = array();
 							$feedback_vars = explode('|', $notification->feedback_vars);
 							foreach ($feedback_vars as $var) {
-									
+								$result[$var . '_counter'] = $this->table_fvars->count(array('notification' => $where[1], 'variable' => $var));
+								$tmp = $this->table_fvars->query('SELECT DISTINCT value FROM fvars WHERE notification = "'.$where[1].'" AND variable = "'.$var.'";');
+								//var_dump($tmp); die();
+								if($tmp){
+									foreach ($tmp as $value) {
+										$values[$var.'.'.$value->value] = $this->table_fvars->count(array('notification' => $where[1], 'value' => $value->value)); 
+									}
+								}
 							}
 							$feedback_counter = $this->table_feedbacks->count(array('notification' => $notification->id));
 							$message = array(
 								'notification' => $notification->id,
-								'feedback_counter' => $feedback_counter 
+								'feedback_counter' => $feedback_counter,
+								'variable_counter' => $result,
+								'values_counter' => $values
 							);
 							header('Content-Type: application/json');
 							echo json_encode($message);

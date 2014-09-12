@@ -26,6 +26,7 @@ SET time_zone = "+00:00";
 -- โครงสร้างตาราง `feedbacks`
 --
 
+DROP TABLE IF EXISTS `feedbacks`;
 CREATE TABLE IF NOT EXISTS `feedbacks` (
   `id` varchar(32) NOT NULL,
   `notification` varchar(32) NOT NULL,
@@ -41,8 +42,10 @@ CREATE TABLE IF NOT EXISTS `feedbacks` (
 -- โครงสร้างตาราง `fvars`
 --
 
+DROP TABLE IF EXISTS `fvars`;
 CREATE TABLE IF NOT EXISTS `fvars` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `notification` varchar(32) NOT NULL,
   `feedback` varchar(32) NOT NULL,
   `variable` varchar(16) NOT NULL,
   `value` varchar(256) NOT NULL,
@@ -55,6 +58,7 @@ CREATE TABLE IF NOT EXISTS `fvars` (
 -- โครงสร้างตาราง `notifications`
 --
 
+DROP TABLE IF EXISTS `notifications`;
 CREATE TABLE IF NOT EXISTS `notifications` (
   `id` varchar(32) NOT NULL,
   `app_id` varchar(16) NOT NULL,
@@ -81,6 +85,7 @@ CREATE TABLE IF NOT EXISTS `notifications` (
 -- โครงสร้างตาราง `sessions`
 --
 
+DROP TABLE IF EXISTS `sessions`;
 CREATE TABLE IF NOT EXISTS `sessions` (
   `session_id` varchar(40) NOT NULL DEFAULT '0',
   `ip_address` varchar(45) NOT NULL DEFAULT '0',
@@ -97,6 +102,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 -- โครงสร้างตาราง `users`
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` varchar(16) NOT NULL,
   `name` varchar(64) NOT NULL,

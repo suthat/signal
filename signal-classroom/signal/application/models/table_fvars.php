@@ -124,6 +124,16 @@ class Table_fvars extends CI_Model {
 		}
 		return $this->db->count_all_results('fvars');
 	}
+
+	public function query($qs = FALSE)
+	{
+		$q = $this->db->query($qs);
+		if($q->num_rows() > 0){
+			return $q->result();
+		}else{
+			return FALSE;
+		}
+	}
 }
 
 /* End of file table_fvars.php */
