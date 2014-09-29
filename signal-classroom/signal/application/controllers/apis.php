@@ -20,8 +20,9 @@ class Apis extends CI_Controller {
 		$this->unauthorized();
 	}
 
-	public function mdl($action = FALSE, $param = FALSE)
+	public function mdl($action = FALSE)
 	{
+		$param = $_GET['param'];
 		if($action === 'submit'){
 			$mdl = json_decode(urldecode($param));
 			//var_dump($mdl);
