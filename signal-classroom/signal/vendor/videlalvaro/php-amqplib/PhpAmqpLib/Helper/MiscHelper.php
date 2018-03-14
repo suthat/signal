@@ -4,19 +4,25 @@ namespace PhpAmqpLib\Helper;
 
 class MiscHelper
 {
+
     public static function debug_msg($s)
     {
         echo $s, "\n";
     }
 
+
+
     public static function methodSig($a)
     {
         if (is_string($a)) {
             return $a;
+
         } else {
-            return sprintf("%d,%d",$a[0] ,$a[1]);
+            return sprintf("%d,%d", $a[0], $a[1]);
         }
     }
+
+
 
     public static function saveBytes($bytes)
     {
@@ -24,6 +30,23 @@ class MiscHelper
         fwrite($fh, $bytes);
         fclose($fh);
     }
+
+
+
+    /**
+     * Gets a number (either int or float) and returns an array containing its integer part as first element and its
+     * decimal part mutliplied by 10^6. Useful for some PHP stream functions that need seconds and microseconds as
+     * different arguments
+     *
+     * @param $number
+     * @return array
+     */
+    public static function splitSecondsMicroseconds($number)
+    {
+        return array(floor($number), ($number - floor($number)) * 1000000);
+    }
+
+
 
     /**
      * View any string as a hexdump.
@@ -36,19 +59,21 @@ class MiscHelper
      * @author      Aidan Lister <aidan@php.net>
      * @author      Peter Waller <iridum@php.net>
      * @link        http://aidanlister.com/repos/v/function.hexdump.php
-     * @param string $data       The string to be dumped
-     * @param bool   $htmloutput Set to false for non-HTML output
-     * @param bool   $uppercase  Set to true for uppercase hex
-     * @param bool   $return     Set to true to return the dump
+     *
+     * @param string $data The string to be dumped
+     * @param bool $htmloutput Set to false for non-HTML output
+     * @param bool $uppercase Set to true for uppercase hex
+     * @param bool $return Set to true to return the dump
+     * @return string
      */
     public static function hexdump($data, $htmloutput = true, $uppercase = false, $return = false)
     {
         // Init
-        $hexi   = '';
-        $ascii  = '';
-        $dump   = ($htmloutput === true) ? '<pre>' : '';
+        $hexi = '';
+        $ascii = '';
+        $dump = ($htmloutput === true) ? '<pre>' : '';
         $offset = 0;
-        $len    = strlen($data);
+        $len = mb_strlen($data, 'ASCII');
 
         // Upper or lower case hexidecimal
         $x = ($uppercase === false) ? 'x' : 'X';
@@ -61,15 +86,15 @@ class MiscHelper
             // Replace non-viewable bytes with '.'
             if (ord($data[$i]) >= 32) {
                 $ascii .= ($htmloutput === true) ?
-                                htmlentities($data[$i]) :
-                                $data[$i];
+                    htmlentities($data[$i]) :
+                    $data[$i];
             } else {
                 $ascii .= '.';
             }
 
             // Add extra column spacing
             if ($j === 7) {
-                $hexi  .= ' ';
+                $hexi .= ' ';
                 $ascii .= ' ';
             }
 
@@ -79,9 +104,9 @@ class MiscHelper
                 $dump .= sprintf("%04$x  %-49s  %s", $offset, $hexi, $ascii);
 
                 // Reset vars
-                $hexi   = $ascii = '';
+                $hexi = $ascii = '';
                 $offset += 16;
-                $j      = 0;
+                $j = 0;
 
                 // Add newline
                 if ($i !== $len - 1) {
@@ -91,9 +116,7 @@ class MiscHelper
         }
 
         // Finish dump
-        $dump .= $htmloutput === true ?
-                    '</pre>' :
-                    '';
+        $dump .= $htmloutput === true ? '</pre>' : '';
         $dump .= "\n";
 
         // Output method
@@ -103,4 +126,5 @@ class MiscHelper
             return $dump;
         }
     }
+
 }

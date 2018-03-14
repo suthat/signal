@@ -3,6 +3,8 @@
 require_once './vendor/autoload.php';
 use PhpAmqpLib\Connection\AMQPConnection;
 use PhpAmqpLib\Message\AMQPMessage;
+use Coreproc\Gcm\GcmClient;
+use Coreproc\Gcm\Classes\Message;
 
 class Apis extends CI_Controller {
 
@@ -286,6 +288,23 @@ class Apis extends CI_Controller {
 		$channel->basic_publish($msg, $topic);
 		$channel->close();
 		$connection->close();
+	}
+
+	public function push_to_gcm($gcm_api_key = FALSE, $topic = FALSE, $msg = FALSE, $token = FALSE)
+	{
+		$gcmClient = new GcmClient($gcm_api_key);
+		$message = new Message($gcmClient);
+		$message->addRegistrationId('');
+		$message->setData([
+		    'title' => $topic,
+		    'message' => $message
+		]);
+		try {
+		    $response = $message->send();
+		    print_r($response);
+		} catch (Exception $exception) {
+		    echo 'uh-oh: ' . $exception->getMessage();
+		}
 	}
 }
 

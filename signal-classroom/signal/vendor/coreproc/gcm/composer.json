@@ -1,0 +1,20 @@
+{
+    "name": "coreproc/gcm",
+    "description": "Google Cloud Messaging library for PHP",
+    "require": {
+        "guzzlehttp/guzzle": "5.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Bautista",
+            "email": "chrisbjr@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Coreproc\\Gcm\\": "src"
+        }
+    },
+    "minimum-stability": "stable"
+}
