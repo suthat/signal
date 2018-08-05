@@ -6,9 +6,9 @@ This research addressed challenges of the cross-platform push messaging service 
 
 #### Problems of existed notifications
 
-* Lack of a unified service for sending multiple different notification payloads on different
-* Lack of customizable feedback. Most notification providers permitted only basic
-* Lack of capable open platform candidates. Most major notification providers served the online
+* Lack of a unified service for sending multiple different notification payloads on different platform.
+* Lack of customizable feedback. Most notification providers permitted only basic payload without feedback.
+* Lack of capable open platform candidates.
 
 #### Solutions
 
